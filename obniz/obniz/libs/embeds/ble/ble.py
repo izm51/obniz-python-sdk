@@ -35,6 +35,10 @@ class ObnizBLE:
 
         return None
 
+    # dummy
+    async def init_wait(self):
+        pass
+
     def notified(self, obj):
         if "scan_result" in obj:
             val = self.find_peripheral(obj["scan_result"]["address"])
